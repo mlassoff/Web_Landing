@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+// phone - 600px
+// tablet_port - 900px
+// tablet_land - 1100px
+// ORDER: base + typography > general layout + grid > page layout > components*/
+
+@mixin respond($breakpoint){
+    @if $breakpoint == phone{
+        @media (max-width: 600px){ @content; }
+    }
+
+    @if $breakpoint == tablet_port{
+        @media (max-width: 910px){ @content; }
+    }
+
+    @if $breakpoint == tablet_land{
+        @media (max-width: 1200px){ @content; }
+    }
+
+}
+
+
+
+/// Event wrapper
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+

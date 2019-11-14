@@ -1,0 +1,18 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+.btn{
+   color: white;
+   font-style: normal;
+   font-weight: bold;
+   font-size: 3.6rem;
+   color: #FFFFFF;
+   text-align: center;
+   padding: 1rem 1rem;
+   &-yellow{
+      // Orange
+      background: $btn-orange;
+      padding: 1rem 4rem;
+      
+   }
+}
